@@ -1,10 +1,14 @@
 import React from "react";
 import Main from "@/components/main";
-
+import { useRouter } from "next/router";
 export default function Page({ url, brands }) {
+
+
   return (
     <>
-      <Main url={url} brands={brands} />
+      <div class='flex justify-center' >
+        <Main url={url} brands={brands} />
+      </div>
     </>
   );
 }

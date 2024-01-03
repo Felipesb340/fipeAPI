@@ -17,9 +17,7 @@ export default function Main({ url, brands }) {
     // Função para fazer a requisição
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `${url}/${selectedBrand}/modelos/`
-        );
+        const response = await axios.get(`${url}/${selectedBrand}/modelos/`);
         setBrand(response.data);
       } catch (error) {
         console.error("Erro ao buscar dados:", error);
@@ -89,26 +87,28 @@ export default function Main({ url, brands }) {
 
   return (
     <>
-      <SelectComponent
-        options={brands}
-        onChange={handleSelectedBrand}
-        label="Selecione a Marca"
-      />
+      <div class='flex flex-col justify-center w-4/12' >
+        <SelectComponent
+          options={brands}
+          onChange={handleSelectedBrand}
+          label="Selecione a Marca"
+        />
 
-      <SelectComponent
-        options={brand.modelos}
-        onChange={handleSelectModel}
-        label="Selecione o Modelo"
-      />
+        <SelectComponent
+          options={brand.modelos}
+          onChange={handleSelectModel}
+          label="Selecione o Modelo"
+        />
 
-      <SelectComponent
-        options={years}
-        onChange={handleSelectedYear}
-        label="Selecione o Ano"
-        // defaultValue={selectedBrand}
-      />
+        <SelectComponent
+          options={years}
+          onChange={handleSelectedYear}
+          label="Selecione o Ano"
+          // defaultValue={selectedBrand}
+        />
 
-      <DetailsComponent selectedCar={selectedCar} />
+        <DetailsComponent selectedCar={selectedCar} />
+      </div>
     </>
   );
 }

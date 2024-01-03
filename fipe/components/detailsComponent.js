@@ -2,21 +2,21 @@ import React from "react";
 
 const DetailsComponent = ({ selectedCar }) => {
   return (
-    <div>
+    <div class='flex flex-col justify-center text-center mt-9' >
       {selectedCar ? (
-        <div>
-          <p>Ano: {selectedCar.AnoModelo}</p>
-          <p>Combustível: {selectedCar.Combustivel}</p>
-          <p>Modelo: {selectedCar.Modelo}</p>
-          {/* <p>{selectedCar.SiglaCombustivel}</p>
-    <p>{selectedCar.TipoVeiculo}</p> */}
-          <p>Valor: {selectedCar.Valor}</p>
-          <p>Mês Referência: {selectedCar.MesReferencia}</p>
-          <p>Código Fipe: {selectedCar.CodigoFipe}</p>
+        <div class= 'py-2 space-y-2 rounded-2xl bg-[#03396c]' >
+          <p><span>Ano:</span> {selectedCar.AnoModelo}</p>
+          <p><span>Combustível:</span> {selectedCar.Combustivel}</p>
+          <p><span>Modelo:</span> {selectedCar.Modelo}</p>
+          {/* <p><span>{selectedCar.SiglaCombustivel}</p>
+    <p><span>{selectedCar.TipoVeiculo}</p> */}
+          <p><span>Valor:</span> {selectedCar.Valor}</p>
+          <p><span>Mês Referência:</span> {selectedCar.MesReferencia}</p>
+          <p><span>Código Fipe:</span> {selectedCar.CodigoFipe}</p>
         </div>
       ) : (
-        <p>
-          Nenhum veículo selecionado. Selecione um veículo para ver os detalhes.
+        <p class='text-xl py-5 flex flex-col justify-center text-center rounded-2xl bg-[#03396c]'>
+          Selecione um veículo para ver os detalhes.
         </p>
       )}
     </div>

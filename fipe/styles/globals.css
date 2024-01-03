@@ -1,0 +1,33 @@
+/* styles/globals.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: #011f4b;
+  font-family: 'Roboto', sans-serif ;
+  color: #b3cde0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#__next {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  color:#b3cde0;
+  padding-top: 0.25rem;
+  font-weight: 300;
+  font-size: large;
+}
+
+span {
+  font-weight: bold;
+}
